@@ -20,18 +20,18 @@
     var CONFIG = {"hostname":"s.venuslight.site","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="一 更换评论系统    主题默认是的使用多说，当然没有开启，多说早就凉了，搜了一圈相中三款评论系统。原本使用静态博客工具是为了简单方便，这样加个后台反而比WordPress自带各种插件更麻烦了。不过还是装上了  1、isso python语言，sqlite做数据库，折腾了两轮，没有运行起来，换docker也不行，已停更两年，没有安装说明。甚至介绍与实际代码都不一致。网上总结的优缺点：支持邮件通">
+  <meta name="description" content="一 更换评论系统    主题默认是的使用多说，当然没有开启，多说早就凉了，搜了一圈相中三款评论系统。原本使用静态博客工具是为了简单方便，这样加个后台反而比WordPress自带各种插件更麻烦了。不过还是装上了">
 <meta name="keywords" content="comment,hashover,统计,404">
 <meta property="og:type" content="article">
 <meta property="og:title" content="cyanstyle主题填坑">
 <meta property="og:url" content="https://s.venuslight.site/2021/cyanstyle主题填坑/index.html">
 <meta property="og:site_name" content="Story">
-<meta property="og:description" content="一 更换评论系统    主题默认是的使用多说，当然没有开启，多说早就凉了，搜了一圈相中三款评论系统。原本使用静态博客工具是为了简单方便，这样加个后台反而比WordPress自带各种插件更麻烦了。不过还是装上了  1、isso python语言，sqlite做数据库，折腾了两轮，没有运行起来，换docker也不行，已停更两年，没有安装说明。甚至介绍与实际代码都不一致。网上总结的优缺点：支持邮件通">
+<meta property="og:description" content="一 更换评论系统    主题默认是的使用多说，当然没有开启，多说早就凉了，搜了一圈相中三款评论系统。原本使用静态博客工具是为了简单方便，这样加个后台反而比WordPress自带各种插件更麻烦了。不过还是装上了">
 <meta property="og:locale" content="zh-cn">
-<meta property="og:updated_time" content="2021-05-26T15:55:35.185Z">
+<meta property="og:updated_time" content="2021-05-30T16:23:06.741Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="cyanstyle主题填坑">
-<meta name="twitter:description" content="一 更换评论系统    主题默认是的使用多说，当然没有开启，多说早就凉了，搜了一圈相中三款评论系统。原本使用静态博客工具是为了简单方便，这样加个后台反而比WordPress自带各种插件更麻烦了。不过还是装上了  1、isso python语言，sqlite做数据库，折腾了两轮，没有运行起来，换docker也不行，已停更两年，没有安装说明。甚至介绍与实际代码都不一致。网上总结的优缺点：支持邮件通">
+<meta name="twitter:description" content="一 更换评论系统    主题默认是的使用多说，当然没有开启，多说早就凉了，搜了一圈相中三款评论系统。原本使用静态博客工具是为了简单方便，这样加个后台反而比WordPress自带各种插件更麻烦了。不过还是装上了">
 
 <link rel="canonical" href="https://s.venuslight.site/2021/cyanstyle主题填坑/">
 
@@ -227,10 +227,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
-              
 
-              <time title="Created: 2021-05-26 22:51:22 / Modified: 23:55:35" itemprop="dateCreated datePublished" datetime="2021-05-26T22:51:22+08:00">2021-05-26</time>
+              <time title="Created: 2021-05-26 22:51:22" itemprop="dateCreated datePublished" datetime="2021-05-26T22:51:22+08:00">2021-05-26</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-05-31 00:23:06" itemprop="dateModified" datetime="2021-05-31T00:23:06+08:00">2021-05-31</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -262,8 +268,23 @@
          <h3> 一 更换评论系统 </h3>
 <div>
  主题默认是的使用多说，当然没有开启，多说早就凉了，搜了一圈相中三款评论系统。原本使用静态博客工具是为了简单方便，这样加个后台反而比WordPress自带各种插件更麻烦了。不过还是装上了</div>
-
-<p>1、isso python语言，sqlite做数据库，折腾了两轮，没有运行起来，换docker也不行，已停更两年，没有安装说明。甚至介绍与实际代码都不一致。<br>网上总结的优缺点：<br>支持邮件通知，每个评论都发给管理员，评论者可以接收别人回复自己的评论；<br>支持 Gravatar 头像显示（支持使用CDN镜像，你懂的），或者随机头像；<br>支持 MarkDown；<br>后台审核管理功能；<br>对评论进行&lt;顶&gt;/&lt;踩&gt;;<br>缺点：<br>邮件通知只有英文，已有人提交 pull request，还没合并。<br>只支持 2 级评论回复。<br>不支持回复评论时通知评论作者， Isso 的作者在考虑要不要 merge 这个 pull request。 已经支持。<br>avatar 头像不能关联 gravatar.com 的头像。 已经支持。<br>已有后台管理系统。评论不好管理 ，常规方法可以通过邮件提醒里面的链接来删除评论。非常规方法就要修改数据库了，sqlite 进入命令行:<br>2、Valine 无后端，使用Leancloud的serverless，有些兴趣，Leancloud的免费资源足够支撑我这没人看的blog。没空研究。<br>3、hashover-next。虽然尽量避开php，但是资源还是挺多又好用。网上免费的虚拟主机空间也都是php的，直接丢进去不需要折腾环境就能用。不过最开始还是放在外网服务器上的，以为几个php程序已经跑起来应该只要配个域名写个nginx就能用，浪费单休的周末最后还是丢到php空间里用了。<br>默认是放在引用这个评论系统的根目录里面，然后用相对路径来引用，不过hashover-next相对于旧版的hashover多了些功能，可以开启多站点支持。另外需要注意hashover-next所在的站点未开启https的话，在加了SSL的站点是无法引用的。</p>
+<a id="more"></a>
+1、isso python语言，sqlite做数据库，折腾了两轮，没有运行起来，换docker也不行，已停更两年，没有安装说明。甚至介绍与实际代码都不一致。
+网上总结的优缺点：
+支持邮件通知，每个评论都发给管理员，评论者可以接收别人回复自己的评论；
+支持 Gravatar 头像显示（支持使用CDN镜像，你懂的），或者随机头像；
+支持 MarkDown；
+后台审核管理功能；
+对评论进行<顶>/<踩>;
+缺点：
+邮件通知只有英文，已有人提交 pull request，还没合并。
+只支持 2 级评论回复。
+不支持回复评论时通知评论作者， Isso 的作者在考虑要不要 merge 这个 pull request。 已经支持。
+avatar 头像不能关联 gravatar.com 的头像。 已经支持。
+已有后台管理系统。评论不好管理 ，常规方法可以通过邮件提醒里面的链接来删除评论。非常规方法就要修改数据库了，sqlite 进入命令行:
+2、Valine 无后端，使用Leancloud的serverless，有些兴趣，Leancloud的免费资源足够支撑我这没人看的blog。没空研究。
+3、hashover-next。虽然尽量避开php，但是资源还是挺多又好用。网上免费的虚拟主机空间也都是php的，直接丢进去不需要折腾环境就能用。不过最开始还是放在外网服务器上的，以为几个php程序已经跑起来应该只要配个域名写个nginx就能用，浪费单休的周末最后还是丢到php空间里用了。
+默认是放在引用这个评论系统的根目录里面，然后用相对路径来引用，不过hashover-next相对于旧版的hashover多了些功能，可以开启多站点支持。另外需要注意hashover-next所在的站点未开启https的话，在加了SSL的站点是无法引用的。
 <h3> 二 添加不蒜子统计 </h3>
 百度统计更新懒加载后说的是可以减少对网站打开速度的影响，但是就不能在页面上显示统计量了，只能登录百度统计后台查看。不蒜子算是最简单的展示访问数据的JS工具。代码如下，添加到需要统计的页面。但是虽然支持https，不蒜子的JS文件很少能正常加载出来~~~
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;script async src=&quot;//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js&quot;&gt; </span><br><span class="line">	&lt;/script&gt;</span><br><span class="line">&lt;span id=&quot;busuanzi_container_site_pv&quot;&gt;</span><br><span class="line">本站总访问量&lt;span id=&quot;busuanzi_value_site_pv&quot;&gt;&lt;/span&gt;次</span><br><span class="line">&lt;/span&gt;</span><br><span class="line">&lt;span id=&quot;busuanzi_container_site_uv&quot;&gt;</span><br><span class="line">本站访客数&lt;span id=&quot;busuanzi_value_site_uv&quot;&gt;&lt;/span&gt;人次</span><br><span class="line">&lt;/span&gt;</span><br><span class="line">&lt;span id=&quot;busuanzi_container_page_pv&quot;&gt;</span><br><span class="line">本文总阅读量&lt;span id=&quot;busuanzi_value_page_pv&quot;&gt;&lt;/span&gt;次</span><br><span class="line">&lt;/span&gt;</span><br></pre></td></tr></table></figure>
@@ -278,7 +299,7 @@ article.ejs里面注释掉：
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- &lt;script&gt;window._bd_share_config=&#123;&quot;common&quot;:&#123;&quot;bdSnsKey&quot;:&#123;&#125;,&quot;bdText&quot;:&quot;&quot;,&quot;bdMini&quot;:&quot;1&quot;,&quot;bdMiniList&quot;:false,&quot;bdPic&quot;:&quot;&quot;,&quot;bdStyle&quot;:&quot;2&quot;,&quot;bdSize&quot;:&quot;16&quot;&#125;,&quot;share&quot;:&#123;&#125;&#125;;with(document)0[(getElementsByTagName(&apos;head&apos;)[0]||body).appendChild(createElement(&apos;script&apos;)).src=&apos;/js/share.js&apos;];&lt;/script&gt;</span><br><span class="line"> --&gt;</span><br></pre></td></tr></table></figure>
 
 <p>不知道哪里还有坑，先这样用着吧。simple and sinple，this is life。</p>
-
+</踩></顶>
     </div>
 
     
@@ -389,7 +410,7 @@ article.ejs里面注释掉：
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-count">10</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>

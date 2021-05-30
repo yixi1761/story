@@ -225,10 +225,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
-              
 
-              <time title="Created: 2021-05-26 22:51:22 / Modified: 23:55:35" itemprop="dateCreated datePublished" datetime="2021-05-26T22:51:22+08:00">2021-05-26</time>
+              <time title="Created: 2021-05-26 22:51:22" itemprop="dateCreated datePublished" datetime="2021-05-26T22:51:22+08:00">2021-05-26</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-05-31 00:23:06" itemprop="dateModified" datetime="2021-05-31T00:23:06+08:00">2021-05-31</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -250,26 +256,17 @@
     <div class="post-body" itemprop="articleBody">
 
       
-           <h3> 一 更换评论系统 </h3>
+          <h3> 一 更换评论系统 </h3>
 <div>
  主题默认是的使用多说，当然没有开启，多说早就凉了，搜了一圈相中三款评论系统。原本使用静态博客工具是为了简单方便，这样加个后台反而比WordPress自带各种插件更麻烦了。不过还是装上了</div>
-
-<p>1、isso python语言，sqlite做数据库，折腾了两轮，没有运行起来，换docker也不行，已停更两年，没有安装说明。甚至介绍与实际代码都不一致。<br>网上总结的优缺点：<br>支持邮件通知，每个评论都发给管理员，评论者可以接收别人回复自己的评论；<br>支持 Gravatar 头像显示（支持使用CDN镜像，你懂的），或者随机头像；<br>支持 MarkDown；<br>后台审核管理功能；<br>对评论进行&lt;顶&gt;/&lt;踩&gt;;<br>缺点：<br>邮件通知只有英文，已有人提交 pull request，还没合并。<br>只支持 2 级评论回复。<br>不支持回复评论时通知评论作者， Isso 的作者在考虑要不要 merge 这个 pull request。 已经支持。<br>avatar 头像不能关联 gravatar.com 的头像。 已经支持。<br>已有后台管理系统。评论不好管理 ，常规方法可以通过邮件提醒里面的链接来删除评论。非常规方法就要修改数据库了，sqlite 进入命令行:<br>2、Valine 无后端，使用Leancloud的serverless，有些兴趣，Leancloud的免费资源足够支撑我这没人看的blog。没空研究。<br>3、hashover-next。虽然尽量避开php，但是资源还是挺多又好用。网上免费的虚拟主机空间也都是php的，直接丢进去不需要折腾环境就能用。不过最开始还是放在外网服务器上的，以为几个php程序已经跑起来应该只要配个域名写个nginx就能用，浪费单休的周末最后还是丢到php空间里用了。<br>默认是放在引用这个评论系统的根目录里面，然后用相对路径来引用，不过hashover-next相对于旧版的hashover多了些功能，可以开启多站点支持。另外需要注意hashover-next所在的站点未开启https的话，在加了SSL的站点是无法引用的。</p>
-<h3> 二 添加不蒜子统计 </h3>
-百度统计更新懒加载后说的是可以减少对网站打开速度的影响，但是就不能在页面上显示统计量了，只能登录百度统计后台查看。不蒜子算是最简单的展示访问数据的JS工具。代码如下，添加到需要统计的页面。但是虽然支持https，不蒜子的JS文件很少能正常加载出来~~~
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;script async src=&quot;//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js&quot;&gt; </span><br><span class="line">	&lt;/script&gt;</span><br><span class="line">&lt;span id=&quot;busuanzi_container_site_pv&quot;&gt;</span><br><span class="line">本站总访问量&lt;span id=&quot;busuanzi_value_site_pv&quot;&gt;&lt;/span&gt;次</span><br><span class="line">&lt;/span&gt;</span><br><span class="line">&lt;span id=&quot;busuanzi_container_site_uv&quot;&gt;</span><br><span class="line">本站访客数&lt;span id=&quot;busuanzi_value_site_uv&quot;&gt;&lt;/span&gt;人次</span><br><span class="line">&lt;/span&gt;</span><br><span class="line">&lt;span id=&quot;busuanzi_container_page_pv&quot;&gt;</span><br><span class="line">本文总阅读量&lt;span id=&quot;busuanzi_value_page_pv&quot;&gt;&lt;/span&gt;次</span><br><span class="line">&lt;/span&gt;</span><br></pre></td></tr></table></figure>
-
-<p>主题的各部分内容是分块用ejs文件写的，放在footer.ejs里面就可以了。</p>
-<h3> 三 删除百度分享 </h3>
-虽然看不到，后台console一堆error： https://bdimg.share.baidu.com/static/api/js/share/share_api.js 这个JS文件加载不出来。config里面已经删了share还是有。
-article.ejs里面注释掉：
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--&lt;div class=&quot;comments-link&quot;&gt;</span><br><span class="line">    &lt;% if (post.comments &amp;&amp; theme.duoshuo_shortname)&#123; %&gt;</span><br><span class="line">    &lt;a href=&quot;&lt;%- url_for(post.path) %&gt;#comments&quot; class=&quot;leave-reply&quot;&gt;&lt;%= theme.reply %&gt;&lt;/a&gt;</span><br><span class="line">    &lt;% &#125; %&gt;</span><br><span class="line">    &lt;a href=&quot;javascript:void(0);&quot; data-url=&quot;&lt;%- post.permalink %&gt;&quot; data-id=&quot;&lt;%= post._id %&gt;&quot; class=&quot;leave-reply bdsharebuttonbox&quot; data-cmd=&quot;more&quot;&gt;&lt;%= theme.share %&gt;&lt;/a&gt;</span><br><span class="line">        &lt;/div&gt;--&gt;&lt;!-- .comments-link --&gt;</span><br></pre></td></tr></table></figure>
-
-<p>然后在after-footer.ejs里面注释掉首行的引用：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- &lt;script&gt;window._bd_share_config=&#123;&quot;common&quot;:&#123;&quot;bdSnsKey&quot;:&#123;&#125;,&quot;bdText&quot;:&quot;&quot;,&quot;bdMini&quot;:&quot;1&quot;,&quot;bdMiniList&quot;:false,&quot;bdPic&quot;:&quot;&quot;,&quot;bdStyle&quot;:&quot;2&quot;,&quot;bdSize&quot;:&quot;16&quot;&#125;,&quot;share&quot;:&#123;&#125;&#125;;with(document)0[(getElementsByTagName(&apos;head&apos;)[0]||body).appendChild(createElement(&apos;script&apos;)).src=&apos;/js/share.js&apos;];&lt;/script&gt;</span><br><span class="line"> --&gt;</span><br></pre></td></tr></table></figure>
-
-<p>不知道哪里还有坑，先这样用着吧。simple and sinple，this is life。</p>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/cyanstyle主题填坑/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -319,7 +316,7 @@ article.ejs里面注释掉：
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-05-26 23:55:35" itemprop="dateModified" datetime="2021-05-26T23:55:35+08:00">2021-05-26</time>
+                <time title="Modified: 2021-05-31 00:22:51" itemprop="dateModified" datetime="2021-05-31T00:22:51+08:00">2021-05-31</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -343,12 +340,14 @@ article.ejs里面注释掉：
 
       
           <p>&emsp;&emsp;<br>profreehost 据说是byet的分销，与其他免费主机相比，没有空间大小、流量和域名数量的限制，数据库也没有限制（写着不支持外网访问，我也没有试过）。byet官网写的有空间大小和流量限制，实际注册后也是没有的。还有一家叫infinityfree，也是同样。 <br><br>&emsp;&emsp;<br>这三家后台都是cPannel面板，长得一模一样，可选的域名有些区别。最开始用的就是profreehost，原本以为byet是东家会有些优势，但是试过后发现没有好记的域名，当然都是免费的二级域名啦。另外感觉Profreehost的打开速度貌似更快一些，byet有时候还会打不开。So，还是继续用Profreehost的unaux.com吧。infinityfree这家注册了没有用，反正都一样。 <br></p>
-<h4> BUG 1 </h4>
-删除域名后文件夹无法删除，而且被删除的子域名也是无法重新注册的。所以新建子域名的话还是慎重的好。虽说子域名数量不限，但是文件夹里面目录太多的话还是很乱的。不过后来发现子域名的文件夹名字可以更改，清空目录后改个Z开头的名字让废弃的子域名目录排在后面显得没那么杂乱无章。
-<h4> BUG 2 </h4>
-我现在已经无法使用alias域名了，也就是说要么用自己的域名建站，要么用免费申请的二级域名。废了很多时间来测试原因，起初以为是WordPress不支持多域名，然后折腾wp-config.php，实际上呢404页面是Profreehost定义的，也就是说域名解析已经到了英国。然后旁边的静态站点的alias域名也是404.然后新建个测试站点，unaux.com访问正常，新解析个自己的域名，还是无法访问。那么只能说明，Profreehost已经不让我再用alias域名功能了。可能我新建的或者绑定的域名太多了吧。论坛上满满都是域名被blocked的。定期备份防blocked是首要任务。
-<h4> BUG 3 </h4>
-SSL证书难加。生成私钥和CSR（重复点了N次才出来），然后 https://freessl.cn 上面申请TrustAsia有效期一年，但是文件验证的方法一直显示检测中。明明只是个链接get一行字符串而已。百度云加速上面倒是很简单申请了，未备案域名又无法加速CDN。https://csr.chinassl.net申请的chinassl签名的浏览器又不认。（key是server上部署的私钥，CSR是与key同时生成的，用来发给签名机构申请证书的，Certificate则是类似TrustAsia的机构签发的证书，有有效期。）
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/使用免费空间创建博客网站/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -442,7 +441,7 @@ SSL证书难加。生成私钥和CSR（重复点了N次才出来），然后 htt
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-count">10</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
