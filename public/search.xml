@@ -4,23 +4,50 @@
     <title><![CDATA[使用百度云加速]]></title>
     <url>%2F2021%2F%E4%BD%BF%E7%94%A8%E7%99%BE%E5%BA%A6%E4%BA%91%E5%8A%A0%E9%80%9F%2F</url>
     <content type="text"></content>
+      <categories>
+        <category>CDN</category>
+      </categories>
+      <tags>
+        <tag>comment</tag>
+        <tag>hashover</tag>
+        <tag>统计</tag>
+        <tag>404</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[WordPress建立记录（1）]]></title>
     <url>%2F2021%2FWordPress%E5%BB%BA%E7%AB%8B%E8%AE%B0%E5%BD%95%EF%BC%881%EF%BC%89%2F</url>
     <content type="text"></content>
+      <categories>
+        <category>CDN</category>
+      </categories>
+      <tags>
+        <tag>comment</tag>
+        <tag>hashover</tag>
+        <tag>统计</tag>
+        <tag>404</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[使用免费空间创建博客网站（2）]]></title>
     <url>%2F2021%2F%E4%BD%BF%E7%94%A8%E5%85%8D%E8%B4%B9%E7%A9%BA%E9%97%B4%E5%88%9B%E5%BB%BA%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99%EF%BC%882%EF%BC%89%2F</url>
     <content type="text"><![CDATA[byet.host的主页上有对比各个免费虚拟主机的速度对比，当然是他们家最快，鉴于byet的不完美，试了其他几家的php空间。 freehostia 250MB存储，6GB月流量，1个数据库10MB，支持memcache还支持Python，面板看起来比cpanel精致，但是没那么好用。WordPress的插件失灵了，上传的onemanager打开首页只有两行注释，其他空白。对比下Profreehost，貌似用的CGI/FASTCGI，没有Apache。或者哪里有设置问题。也就只有速度快这一点了，其实还挺想用，后台文件管理可以直接当编辑器了。 Profreehost 除了迁移麻烦外，不限制空间大小的话可以用后台的媒体库管理照片之类的，加上文件夹分类功能，比本地更实用。前段时间绑定域名和addon域名都是404，连带byethost也是。这几天又好了。看来是折腾太多被临时屏蔽掉了。有自己的域名呢，就试着用国内的CDN，之前买的ucloud的100G不限时的，结果CDN指向IP呢，不知道转哪去了，指向unaux的域名呢，加载不到静态文件。Ucloud的CDN又没有cname的方式。百度云加速不知道如何，先解析过来，等过几天404消了看看吧，cname方式应该跟DNS直接Cname没区别。 刚发现的一家，hyperphp，看到那条绿色的龙和cpanel面板就知道也是byet分销了。加上infinityfree就是4家一模一样的了。]]></content>
+      <categories>
+        <category>CDN</category>
+      </categories>
+      <tags>
+        <tag>comment</tag>
+        <tag>hashover</tag>
+        <tag>统计</tag>
+        <tag>404</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[几种在线git托管方法]]></title>
     <url>%2F2021%2F%E5%87%A0%E7%A7%8D%E5%9C%A8%E7%BA%BFgit%E6%89%98%E7%AE%A1%E6%96%B9%E6%B3%95%2F</url>
     <content type="text"><![CDATA[github &emsp;&emsp;&emsp;用过git的都用过这个了吧，私有仓库现在也免费了。容量大，稳定好用。静态站点的page功能可以cname方式使用自己的域名，也不限制站点数量，最近又添加了自动申请SSL证书的福利，letsencrypt的免费证书，这家的证书都是三个月，续期还没试过。 &emsp;&emsp;gitalk和gitment是用GitHub的issue当做后台的评论系统（本站就是这样用的），应该不是滥用吧。 &emsp;&emsp;唯一可惜的是国内访问不稳，可能上一分钟能访问，下一秒就点不开了，过一会儿又好了。这样的话page功能也就没法直接用了，毕竟速度慢和打不开都是无法忽略的障碍。当然可以用CDN之类的解决。目前是这样，希望以后不要恶化。 gitlab &emsp;&emsp;注册了下，进去建了个test仓库，点开几个按钮看看，然后就被踢出来了，账号被blocked。一直找不到解禁的方法，也懒得重新注册，似乎也没有什么吸引人的特色，以为会比GitHub速度快，限制少，然而并没有。据说这个是一些公司买来开源工具搭建内网服务用的。后来发现这家公开说明不给中国人用，禁止雇用包括中国在内的几个国家的员工。反正也没人去，不过应该会有很多国内的公司送钱去贴人家的冷屁股买来用吧。之前发现的主机商家googiehost也是，注册前不说，进去发现账号是blocked的才知道也是禁止国人用的。还假惺惺的添加China的选项。 coding &emsp;&emsp; gitee &emsp;&emsp; gogs &emsp;&emsp;]]></content>
       <categories>
-        <category>web server</category>
+        <category>git</category>
       </categories>
       <tags>
         <tag>comment</tag>
@@ -32,7 +59,7 @@
   <entry>
     <title><![CDATA[cyanstyle主题填坑]]></title>
     <url>%2F2021%2Fcyanstyle%E4%B8%BB%E9%A2%98%E5%A1%AB%E5%9D%91%2F</url>
-    <content type="text"><![CDATA[一 更换评论系统 主题默认是的使用多说，当然没有开启，多说早就凉了，搜了一圈相中三款评论系统。原本使用静态博客工具是为了简单方便，这样加个后台反而比WordPress自带各种插件更麻烦了。不过还是装上了 1、isso python语言，sqlite做数据库，折腾了两轮，没有运行起来，换docker也不行，已停更两年，没有安装说明。甚至介绍与实际代码都不一致。 网上总结的优缺点： 支持邮件通知，每个评论都发给管理员，评论者可以接收别人回复自己的评论； 支持 Gravatar 头像显示（支持使用CDN镜像，你懂的），或者随机头像； 支持 MarkDown； 后台审核管理功能； 对评论进行; 缺点： 邮件通知只有英文，已有人提交 pull request，还没合并。 只支持 2 级评论回复。 不支持回复评论时通知评论作者， Isso 的作者在考虑要不要 merge 这个 pull request。 已经支持。 avatar 头像不能关联 gravatar.com 的头像。 已经支持。 已有后台管理系统。评论不好管理 ，常规方法可以通过邮件提醒里面的链接来删除评论。非常规方法就要修改数据库了，sqlite 进入命令行: 2、Valine 无后端，使用Leancloud的serverless，有些兴趣，Leancloud的免费资源足够支撑我这没人看的blog。没空研究。 3、hashover-next。虽然尽量避开php，但是资源还是挺多又好用。网上免费的虚拟主机空间也都是php的，直接丢进去不需要折腾环境就能用。不过最开始还是放在外网服务器上的，以为几个php程序已经跑起来应该只要配个域名写个nginx就能用，浪费单休的周末最后还是丢到php空间里用了。 默认是放在引用这个评论系统的根目录里面，然后用相对路径来引用，不过hashover-next相对于旧版的hashover多了些功能，可以开启多站点支持。另外需要注意hashover-next所在的站点未开启https的话，在加了SSL的站点是无法引用的。 二 添加不蒜子统计 百度统计更新懒加载后说的是可以减少对网站打开速度的影响，但是就不能在页面上显示统计量了，只能登录百度统计后台查看。不蒜子算是最简单的展示访问数据的JS工具。代码如下，添加到需要统计的页面。但是虽然支持https，不蒜子的JS文件很少能正常加载出来~~~ 1234567891011&lt;script async src=&quot;//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js&quot;&gt; &lt;/script&gt;&lt;span id=&quot;busuanzi_container_site_pv&quot;&gt;本站总访问量&lt;span id=&quot;busuanzi_value_site_pv&quot;&gt;&lt;/span&gt;次&lt;/span&gt;&lt;span id=&quot;busuanzi_container_site_uv&quot;&gt;本站访客数&lt;span id=&quot;busuanzi_value_site_uv&quot;&gt;&lt;/span&gt;人次&lt;/span&gt;&lt;span id=&quot;busuanzi_container_page_pv&quot;&gt;本文总阅读量&lt;span id=&quot;busuanzi_value_page_pv&quot;&gt;&lt;/span&gt;次&lt;/span&gt; 主题的各部分内容是分块用ejs文件写的，放在footer.ejs里面就可以了。 三 删除百度分享 虽然看不到，后台console一堆error： https://bdimg.share.baidu.com/static/api/js/share/share_api.js 这个JS文件加载不出来。config里面已经删了share还是有。 article.ejs里面注释掉： 123456&lt;!--&lt;div class=&quot;comments-link&quot;&gt; &lt;% if (post.comments &amp;&amp; theme.duoshuo_shortname)&#123; %&gt; &lt;a href=&quot;&lt;%- url_for(post.path) %&gt;#comments&quot; class=&quot;leave-reply&quot;&gt;&lt;%= theme.reply %&gt;&lt;/a&gt; &lt;% &#125; %&gt; &lt;a href=&quot;javascript:void(0);&quot; data-url=&quot;&lt;%- post.permalink %&gt;&quot; data-id=&quot;&lt;%= post._id %&gt;&quot; class=&quot;leave-reply bdsharebuttonbox&quot; data-cmd=&quot;more&quot;&gt;&lt;%= theme.share %&gt;&lt;/a&gt; &lt;/div&gt;--&gt;&lt;!-- .comments-link --&gt; 然后在after-footer.ejs里面注释掉首行的引用： 12&lt;!-- &lt;script&gt;window._bd_share_config=&#123;&quot;common&quot;:&#123;&quot;bdSnsKey&quot;:&#123;&#125;,&quot;bdText&quot;:&quot;&quot;,&quot;bdMini&quot;:&quot;1&quot;,&quot;bdMiniList&quot;:false,&quot;bdPic&quot;:&quot;&quot;,&quot;bdStyle&quot;:&quot;2&quot;,&quot;bdSize&quot;:&quot;16&quot;&#125;,&quot;share&quot;:&#123;&#125;&#125;;with(document)0[(getElementsByTagName(&apos;head&apos;)[0]||body).appendChild(createElement(&apos;script&apos;)).src=&apos;/js/share.js&apos;];&lt;/script&gt; --&gt; 不知道哪里还有坑，先这样用着吧。simple and sinple，this is life。]]></content>
+    <content type="text"><![CDATA[一 更换评论系统 &emsp;&emsp; 主题默认是的使用多说，当然没有开启，多说早就凉了，搜了一圈相中三款评论系统。原本使用静态博客工具是为了简单方便，这样加个后台反而比WordPress自带各种插件更麻烦了。不过还是装上了。 1、isso python语言，sqlite做数据库，折腾了两轮，没有运行起来，换docker也不行，已停更两年，没有安装说明。甚至介绍与实际代码都不一致。 网上总结的优缺点： 支持邮件通知，每个评论都发给管理员，评论者可以接收别人回复自己的评论； 支持 Gravatar 头像显示（支持使用CDN镜像，你懂的），或者随机头像； 支持 MarkDown； 后台审核管理功能； 对评论进行n; 缺点： 邮件通知只有英文，已有人提交 pull request，还没合并。 只支持 2 级评论回复。 不支持回复评论时通知评论作者， Isso 的作者在考虑要不要 merge 这个 pull request。 已经支持。 avatar 头像不能关联 gravatar.com 的头像。 已经支持。 已有后台管理系统。评论不好管理 ，常规方法可以通过邮件提醒里面的链接来删除评论。非常规方法就要修改数据库了，sqlite 进入命令行: 2、Valine 无后端，使用Leancloud的serverless，有些兴趣，Leancloud的免费资源足够支撑我这没人看的blog。没空研究。 3、hashover-next。虽然尽量避开php，但是资源还是挺多又好用。网上免费的虚拟主机空间也都是php的，直接丢进去不需要折腾环境就能用。不过最开始还是放在外网服务器上的，以为几个php程序已经跑起来应该只要配个域名写个nginx就能用，浪费单休的周末最后还是丢到php空间里用了。 默认是放在引用这个评论系统的根目录里面，然后用相对路径来引用，不过hashover-next相对于旧版的hashover多了些功能，可以开启多站点支持。另外需要注意hashover-next所在的站点未开启https的话，在加了SSL的站点是无法引用的。 二 添加不蒜子统计 百度统计更新懒加载后说的是可以减少对网站打开速度的影响，但是就不能在页面上显示统计量了，只能登录百度统计后台查看。不蒜子算是最简单的展示访问数据的JS工具。代码如下，添加到需要统计的页面。但是虽然支持https，不蒜子的JS文件很少能正常加载出来~~~ 123456789101112buildoutcfg&lt;script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"&gt; &lt;/script&gt;&lt;span id="busuanzi_container_site_pv"&gt;本站总访问量&lt;span id="busuanzi_value_site_pv"&gt;&lt;/span&gt;次&lt;/span&gt;&lt;span id="busuanzi_container_site_uv"&gt;本站访客数&lt;span id="busuanzi_value_site_uv"&gt;&lt;/span&gt;人次&lt;/span&gt;&lt;span id="busuanzi_container_page_pv"&gt;本文总阅读量&lt;span id="busuanzi_value_page_pv"&gt;&lt;/span&gt;次&lt;/span&gt; 主题的各部分内容是分块用ejs文件写的，放在footer.ejs里面就可以了。 三 删除百度分享 虽然看不到，后台console一堆error： https://bdimg.share.baidu.com/static/api/js/share/share_api.js 这个JS文件加载不出来。config里面已经删了share还是有。 article.ejs里面注释掉： 1234567buildoutcfg&lt;!--&lt;div class="comments-link"&gt; &lt;% if (post.comments &amp;&amp; theme.duoshuo_shortname)&#123; %&gt; &lt;a href="&lt;%- url_for(post.path) %&gt;#comments" class="leave-reply"&gt;&lt;%= theme.reply %&gt;&lt;/a&gt; &lt;% &#125; %&gt; &lt;a href="javascript:void(0);" data-url="&lt;%- post.permalink %&gt;" data-id="&lt;%= post._id %&gt;" class="leave-reply bdsharebuttonbox" data-cmd="more"&gt;&lt;%= theme.share %&gt;&lt;/a&gt; &lt;/div&gt;--&gt;&lt;!-- .comments-link --&gt; 然后在after-footer.ejs里面注释掉首行的引用： 123buildoutcfg&lt;!-- &lt;script&gt;window._bd_share_config=&#123;"common":&#123;"bdSnsKey":&#123;&#125;,"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"&#125;,"share":&#123;&#125;&#125;;with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='/js/share.js'];&lt;/script&gt; --&gt; 不知道哪里还有坑，先这样用着吧。simple and sinple，this is life。]]></content>
       <categories>
         <category>web server</category>
       </categories>

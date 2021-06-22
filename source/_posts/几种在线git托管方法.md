@@ -1,7 +1,7 @@
 ---
 title: 几种在线git托管方法
 date: 2021-06-06 23:53:40
-categories: web server
+categories: git 
 tags: [comment, hashover, 统计, 404]
 ---
 <h3> github </h3>
