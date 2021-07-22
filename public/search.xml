@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[使用百度云加速]]></title>
     <url>%2F2021%2F%E4%BD%BF%E7%94%A8%E7%99%BE%E5%BA%A6%E4%BA%91%E5%8A%A0%E9%80%9F%2F</url>
-    <content type="text"></content>
+    <content type="text"><![CDATA[&emsp;&emsp; 百度云加速是CDN来着，免费流量是每天10G，当天的用超了的话可以透支明天的，目前为止从没见流量剩余减少过，可能我的站点访问量太少。 &emsp;&emsp; 设置方法很简单，首先，你需要有个已经备案了的域名，没有的话其他的都不用看了，这是基本前提。 &emsp;&emsp; 原理很简单，]]></content>
       <categories>
         <category>CDN</category>
       </categories>
