@@ -1,5 +1,5 @@
 ---
-title: 另一个静态托管站-cloudflare pages
+title: 静态页面托管站-cloudflare pages
 date: 2021-06-07 23:53:40
 categories: page 
 tags: [static, 免费, html, 静态, 网站]
