@@ -32,7 +32,7 @@ node {
           sh 'npm -v'
           //sh 'sudo apt-get install nodejs'    
           sh 'node -v'      
-          sh 'npm install -g hexo-cli'
+          //sh 'npm install -g hexo-cli'
           sh 'hexo -v'
           sh 'hexo clean'
           sh 'hexo g'
