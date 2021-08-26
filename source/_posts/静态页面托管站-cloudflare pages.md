@@ -5,8 +5,9 @@ categories: page
 tags: [static, 免费, html, 静态, 网站]
 ---
 &emsp;&emsp; 新发现个好用的静态站点托管网站，cloudflare的pages，比他家主业CDN还快一些，可能是少了回源这个步骤。免费分配的 .pages.dev域名还没被强，也不会随时抽风。构建功能支持的挺多的，可惜没有hexo。不过我都是本机渲染然后公开public目录。目前只支持github的仓库代码
-If you are not using a framework, you may input exit 0 into the Build command field.
 <!--more-->
+If you are not using a framework, you may input exit 0 into the Build command field.
+
 
 ```
 Framework/tool	Build command	Build output directory
