@@ -4,4 +4,4 @@ date: 2021-06-06 23:53:40
 categories: git 
 tags: [comment, hashover, 统计, 404]
 ---
-cf_blog
+cf_blog cloudflare的worker每天10万的免费额度
