@@ -31,20 +31,20 @@ node {
           }
       }
       stage('生成ssh key,用于gitee或者github认证，clone两个仓库，只需执行一次') {
-          sh 'cd ~/.ssh && ls'
-          sh 'echo "" | ssh-keygen -t rsa -C admin@venuslight.site '
-          sh 'cd ~/.ssh && ls'
-          sh 'cat ~/.ssh/id_rsa.pub' 
+          // sh 'cd ~/.ssh && ls'
+          // sh 'echo "" | ssh-keygen -t rsa -C admin@venuslight.site '
+          // sh 'cd ~/.ssh && ls'
+          // sh 'cat ~/.ssh/id_rsa.pub' 
 
           //添加git remote仓库，上面执行后再GitHub添加公钥再执行下面的关联
           //单独建winter仓库和winterpublic仓库，避免git冲突
-        //   sh 'git clone git@github.com:yixi1761/winter.git'
-        //   sh 'cd winter && git remote rename origin github && git remote add coding git@e.coding.net:justap/web/winter.git'
-          // sh 'cd winter && git remote -v '
+          sh 'git clone git@github.com:yixi1761/story.git'
+          sh 'cd story && git remote rename origin github && git remote add coding git@e.coding.net:justap/web/story.git'
+          sh 'cd story && git remote -v '
           //下面处理public仓库，子仓库比较麻烦就放到外边单独仓库,从github clone,然后关联gitee
-        //   sh 'git clone git@github.com:yixi1761/winterpublic.git '
-        //   sh 'cd winterpublic && git remote rename origin github && git remote add gitee git@gitee.com:yixi1761/yixi1761.git'
-          // sh 'cd winterpublic && git remote -v '
+          sh 'git clone git@github.com:yixi1761/storypublic.git '
+          sh 'cd storypublic && git remote rename origin github && git remote add gitee git@gitee.com:yixi1761/storypublic.git'
+          sh 'cd storypublic && git remote -v '
       }
       stage('配置hexo环境，缓存前执行一次') {
           // echo '安装npm node hexo-cli'
