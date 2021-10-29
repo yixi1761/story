@@ -1,8 +1,8 @@
-// def remoteConfig = [:]
-// remoteConfig.name = "Ethernetserver"
-// remoteConfig.host = "${REMOTE_HOST}"
-// remoteConfig.port = 2222
-// remoteConfig.allowAnyHosts = true
+def remoteConfig = [:]
+remoteConfig.name = "Ethernetserver"
+remoteConfig.host = "${REMOTE_HOST}"
+remoteConfig.port = 2222
+remoteConfig.allowAnyHosts = true
 
 // def ucloudConfig = [:]
 // ucloudConfig.name = "ucloud"
