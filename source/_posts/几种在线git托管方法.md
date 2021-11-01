@@ -14,7 +14,7 @@ tags: [comment, hashover, 统计, 404]
 <h3> coding </h3>
 &emsp;&emsp;目前觉得最好用的托管站，单仓库2GB，大文件100M，文件网盘30GB，单文件300M。还有100GB的制品库和docker仓库。免费的持续集成每月1000min，2核4G 100GB的配置，用自己的VPS接入不限时间，并行触发只有一个。集成cloud studio。
 </br>
-&emsp;&emsp;cloud studio很久之前用过，测试了新建个Ubuntu18的工作空间，创建个python项目模板，扔一边了，那时候git用不惯，主要是多端修改总是出现冲突，还费时费力的搞zerotier+seafile的同步。另外webIDE加载慢，终端的文件管理不友好，还有就是VS code的界面不习惯，毕竟没有sublime text3和pycharm那么顺手。现在看来是最趁手的了。2核  2GB  1T磁盘 限制是每天4个小时，5个工作空间，只能同时开一个；不删文件。git地址任意，命令行补全。
+&emsp;&emsp;cloud studio很久之前用过，测试了新建个Ubuntu18的工作空间，创建个python项目模板，扔一边了，那时候git用不惯，主要是多端修改总是出现冲突，还费时费力的搞zerotier+seafile的同步。另外webIDE加载慢，终端的文件管理不友好，还有就是VS code的界面不习惯，毕竟没有sublime text3和pycharm那么顺手。现在看来是最趁手的了。2核  2GB  1T磁盘 限制是每天4个小时，5个工作空间，只能同时开一个；不删文件。git地址任意，命令行补全。可以用自己的VPS做server，就没有使用时间限制，不过资源限制就是VPS的配置了。
 <h3> codeup </h3>
 &emsp;&emsp;单库容量10GB(Git库5GB + LFS 5GB) ，不限总量，
 流水线：最大并发任务数 3，运行时长 1800 分钟/月。
