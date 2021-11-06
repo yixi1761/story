@@ -27,7 +27,7 @@ node {
           ])        
           script {
               // 您可以在此执行任意的 groovy 脚本
-              sh "ls"
+              // sh "ls"
           }
       }
       stage('生成ssh key,用于gitee或者github认证，clone两个仓库，只需执行一次') {
