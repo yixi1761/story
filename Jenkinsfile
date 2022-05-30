@@ -89,20 +89,20 @@ node {
   }
 }
 
-node {
-  // 使用当前项目下的凭据管理中的 用户名 + 密码 凭据
-  withCredentials([usernamePassword(
-    credentialsId: "${REMOTE_CRED_UCLOUD}",
-    passwordVariable: 'password',
-    usernameVariable: 'userName'
-  )]) {
-    // SSH 登陆用户名
-    ucloudConfig.user = userName
-    // SSH 登陆密码
-    ucloudConfig.password = password
+// node {
+//   // 使用当前项目下的凭据管理中的 用户名 + 密码 凭据
+//   withCredentials([usernamePassword(
+//     credentialsId: "${REMOTE_CRED_UCLOUD}",
+//     passwordVariable: 'password',
+//     usernameVariable: 'userName'
+//   )]) {
+//     // SSH 登陆用户名
+//     ucloudConfig.user = userName
+//     // SSH 登陆密码
+//     ucloudConfig.password = password
 
-    stage("在ucloud中执行git命令") {
-      sshCommand(remote: ucloudConfig, command: 'cd ~/hexo/storypublic && git pull origin main && cp ./* ../story -r')
-    }
-  }
-}
+//     stage("在ucloud中执行git命令") {
+//       sshCommand(remote: ucloudConfig, command: 'cd ~/hexo/storypublic && git pull origin main && cp ./* ../story -r')
+//     }
+//   }
+// }
