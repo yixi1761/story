@@ -80,7 +80,7 @@ node {
       }
 
       stage('推送到remote 仓库') {
-          sh 'cd story && git pull coding master && git push github master'
+          sh 'cd story && git pull github master && git pull coding master && git push coding master &&  git push github master'
           sh 'hexo g'
           sh 'cp ./public/* ./storypublic -r && hexo clean'
           sh 'cd storypublic && git add . && git commit -m"update posts" && git push gitee main && git push github main'
