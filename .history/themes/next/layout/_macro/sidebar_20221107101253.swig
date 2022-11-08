@@ -30,9 +30,7 @@
         {%- endif %}
       </div>
       <!--/noindex-->
-      
-<!-- Insert clustrmaps.com -->
-<script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=7BfqPUks03m4FcdZZ9LBW9RIXoapwSLDbY4tfsbGnY8&cl=ffffff&w=a"></script>
+
 
       <div class="site-overview-wrap sidebar-panel">
         {{ partial('_partials/sidebar/site-overview.swig', {}, {cache: theme.cache.enable}) }}
