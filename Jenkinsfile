@@ -82,9 +82,9 @@ node {
       stage('推送到remote 仓库') {
           sh 'cd story && git pull coding master &&  git push github master'
           sh 'hexo g'
-          sh 'cd storypublic && git pull github main'
+          sh 'git clone git@github.com:yixi1761/storypublic.git'
           sh 'cp ./public/* ./storypublic -r && hexo clean'
-          sh 'cd storypublic && git add . && git commit -m"update posts" &&  git push github main'
+          sh 'cd storypublic && git add . && git commit -m"update posts" &&  git push origin main'
       }
   
   }
