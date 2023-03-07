@@ -31,10 +31,10 @@ node {
           }
       }
       stage('生成ssh key,用于gitee或者github认证，clone两个仓库，只需执行一次') {
-          // sh 'cd ~/.ssh && ls'
-          // sh 'echo "" | ssh-keygen -t rsa -C admin@venuslight.site '
-          // sh 'cd ~/.ssh && ls'
-          // sh 'cat ~/.ssh/id_rsa.pub' 
+          sh 'cd ~/.ssh && ls'
+          sh 'echo "" | ssh-keygen -t rsa -C admin@venuslight.site '
+          sh 'cd ~/.ssh && ls'
+          sh 'cat ~/.ssh/id_rsa.pub' 
 
           //添加git remote仓库，上面执行后再GitHub添加公钥再执行下面的关联
           //单独建winter仓库和winterpublic仓库，避免git冲突
@@ -48,13 +48,13 @@ node {
       }
       stage('配置hexo环境，缓存前执行一次') {
           // echo '安装npm node hexo-cli'
-          sh 'sudo apt remove nodejs'
-          sh 'n 18.14.2'
-          sh 'npm install hexo-cli -g'
-          sh 'npm -v'  
-          sh 'node -v'      
-          sh 'hexo -v'
-          sh 'cd public && ls -lh'
+          // sh 'sudo apt remove nodejs'
+          // sh 'n 18.14.2'
+          // sh 'npm install hexo-cli -g'
+          // sh 'npm -v'  
+          // sh 'node -v'      
+          // sh 'hexo -v'
+          // sh 'cd public && ls -lh'
       }
       stage("通过sftp发行public目录") {
         // 本地创建一个 test.sh 脚本，用来发送到远端执行
@@ -80,11 +80,11 @@ node {
       }
 
       stage('推送到remote 仓库') {
-          sh 'cd story && git pull coding master &&  git push github master'
-          sh 'hexo g'
-          sh 'cd storypublic && git pull origin main'
-          sh 'cp ./public/* ./storypublic -r && hexo clean'
-          sh 'cd storypublic && git add . && git commit -m"update posts" &&  git push origin main'
+          // sh 'cd story && git pull coding master &&  git push github master'
+          // sh 'hexo g'
+          // sh 'cd storypublic && git pull origin main'
+          // sh 'cp ./public/* ./storypublic -r && hexo clean'
+          // sh 'cd storypublic && git add . && git commit -m"update posts" &&  git push origin main'
       }
   
   }
