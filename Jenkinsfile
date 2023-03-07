@@ -48,8 +48,8 @@ node {
       }
       stage('配置hexo环境，缓存前执行一次') {
           // echo '安装npm node hexo-cli'
-          sh 'npm install n -g'
-          sh 'n stable'
+          sh 'sudo apt remove nodejs'
+          sh 'n 18.14.2'
           sh 'npm install hexo-cli -g'
           sh 'npm -v'  
           sh 'node -v'      
