@@ -1,22 +1,19 @@
-def remoteConfig = [:]
-remoteConfig.name = "Ethernetserver"
-remoteConfig.host = "${REMOTE_HOST}"
-remoteConfig.port = 2222
-remoteConfig.allowAnyHosts = true
+// def remoteConfig = [:]
+// remoteConfig.name = "Ethernetserver"
+// remoteConfig.host = "${REMOTE_HOST}"
+// remoteConfig.port = 2222
+// remoteConfig.allowAnyHosts = true
 
-def ucloudConfig = [:]
-ucloudConfig.name = "ucloud"
-ucloudConfig.host = "${REMOTE_HOST_Ucloud}"
-ucloudConfig.allowAnyHosts = true
+// def ucloudConfig = [:]
+// ucloudConfig.name = "ucloud"
+// ucloudConfig.host = "${REMOTE_HOST_Ucloud}"
+// ucloudConfig.allowAnyHosts = true
 
 node {
   // 使用当前项目下的凭据管理中的 SSH 私钥 凭据
-  withCredentials([sshUserPrivateKey(
-    credentialsId: "${REMOTE_CRED}",
-    keyFileVariable: "privateKeyFilePath"
-  )]){
+  {
       // SSH 登陆用户名
-    remoteConfig.user = "${REMOTE_USER_NAME}"
+    // remoteConfig.user = "${REMOTE_USER_NAME}"
     // SSH 私钥文件地址
     remoteConfig.identityFile = privateKeyFilePath
       stage("git 检出+推送") {
