@@ -47,14 +47,14 @@ node {
           // sh 'cd storypublic && git remote -v '
       }
       stage('配置hexo环境，缓存前执行一次') {
-          // echo '安装npm node hexo-cli'
-          //sh 'sudo apt-get install npm'
-          //sh 'sudo apt-get install nodejs' 
-          //sh 'npm install -g hexo-cli'
-          // sh 'npm -v'  
-          // sh 'node -v'      
-          // sh 'hexo -v'
-          // sh 'cd public && ls -lh'
+          echo '安装npm node hexo-cli'
+          sh 'sudo apt-get install npm'
+          sh 'sudo apt-get install nodejs' 
+          sh 'npm install -g hexo-cli'
+          sh 'npm -v'  
+          sh 'node -v'      
+          sh 'hexo -v'
+          sh 'cd public && ls -lh'
       }
       stage("通过sftp发行public目录") {
         // 本地创建一个 test.sh 脚本，用来发送到远端执行
