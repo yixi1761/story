@@ -47,10 +47,10 @@ node {
           // sh 'cd storypublic && git remote -v '
       }
       stage('配置hexo环境，缓存前执行一次') {
-          echo '安装npm node hexo-cli'
-          sh 'sudo apt-get remove npm'
-          sh 'sudo apt-get install npm'
-          sh 'npm install -g hexo-cli'
+          // echo '安装npm node hexo-cli'
+          // sh 'sudo apt-get remove npm'
+          // sh 'sudo apt-get install npm'
+          // sh 'npm install -g hexo-cli'
           sh 'npm -v'  
           sh 'node -v'      
           sh 'hexo -v'
