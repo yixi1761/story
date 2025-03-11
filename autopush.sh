@@ -6,7 +6,7 @@ echo "story ————————————————————— "
 git status
 git add .
 git commit -m ${msg}
-git push coding master
+git push origin master
 
 
 
