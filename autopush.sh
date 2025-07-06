@@ -6,7 +6,8 @@ echo "story ————————————————————— "
 git status
 git add .
 git commit -m ${msg}
-git push origin master
+git push cnb master
+git push github master
 
 
 
