@@ -78,7 +78,8 @@ footer:
     # The full num of gongan beian.
     gongan_num: 2021011241号-1
     # The icon for gongan beian. See: http://www.beian.gov.cn/portal/download
-    gongan_icon_url: https://us3-shanghai2.cn-sh2.ufileos.com/%E5%A4%87%E6%A1%88%E5%9B%BE%E6%A0%87.png
+    #gongan_icon_url: https://us3-shanghai2.cn-sh2.ufileos.com/%E5%A4%87%E6%A1%88%E5%9B%BE%E6%A0%87.png
+    gongan_icon_url: https://cnb.cool/code2025/comment/-/git/raw/master/%E5%A4%87%E6%A1%88%E5%9B%BE%E6%A0%87.png
 
 # Creative Commons 4.0 International License.
 # See: https://creativecommons.org/share-your-work/licensing-types-examples
