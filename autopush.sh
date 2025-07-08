@@ -4,6 +4,7 @@ echo $msg
 echo "story ————————————————————— "
 #hexo g
 git status
+git lfs track *.jpg *.jpeg *.mov *.png *.gif *.bmp *.webp *.psd *.ico *.mp4 *.zip *.rar *.gz
 git add .
 git commit -m ${msg}
 git push cnb master
