@@ -676,7 +676,7 @@ google_analytics:
   only_pageview: false
 
 # Baidu Analytics
-baidu_analytics: # <app_id>
+baidu_analytics: 1831bdf36f82df336b68e5b59b8c5ba8 # <app_id>
 
 # Growingio Analytics
 growingio_analytics: # <project_id>
@@ -728,12 +728,12 @@ busuanzi_count:
 # Algolia Search
 # For more information: https://www.algolia.com
 algolia_search:
-  enable: false
+  enable: true
   hits:
     per_page: 10
   labels:
     input_placeholder: Search for Posts
-    hits_empty: "We didn't find any results for the search: ${query}"
+    hits_empty: "没找到想要的结果...: ${query}"
     hits_stats: "${hits} results found in ${time} ms"
 
 # Local Search
