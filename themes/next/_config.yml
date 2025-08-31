@@ -88,7 +88,7 @@ footer:
 # CC licenses are available in 39 languages, you can find the specific and correct abbreviation you need on https://creativecommons.org
 creative_commons:
   license: by-nc-sa
-  sidebar: false
+  sidebar: true
   post: false
   language:
 
@@ -676,7 +676,7 @@ google_analytics:
   only_pageview: false
 
 # Baidu Analytics
-baidu_analytics: 1831bdf36f82df336b68e5b59b8c5ba8 # <app_id>
+baidu_analytics: b0668ee209ea5ce13857829486292221 # <app_id>
 
 # Growingio Analytics
 growingio_analytics: # <project_id>
