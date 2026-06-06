@@ -27,7 +27,8 @@ services:
     stdin_open: true
     command: ""
     ```
+    
     4:在之前的顺道上面新建个应用程序，添加域名：
-    ![]("image copy.png")
+    ![](image1.png)
     <br />
     5:手机和PC上面的笔记重新登录，这次可以用域名而不是IP地址了
